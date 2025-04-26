@@ -1,0 +1,27 @@
+image_size: 1024
+image_encoder: "sam_vit_b_adapter"
+mask_decoder: "lora_mask_decoder"
+sam_checkpoint: "weights/sam_vit_b.pth"
+wandb_project_name: "synapse"
+prompt_predictor: "sam_vitb_high_res_ppn"
+
+
+dataset:
+    name: synapse
+    root: /dataNfs/ncp/SamRadiology-main/dataset/Synapse
+    image_size: 512
+    split: 0.8 # 0.0263 # training split
+    seed: 42
+    batch_size: 4
+    num_workers: 4
+    num_classes: 7
+    num_tokens: 10
+
+training:
+    max_epochs: 400
+    save_path: checkpoints/synapse
+
+inference:
+    name: acdc_test
+    root: /path/to/your/test_data
+    checkpoint_path: /path/to/your/checkpoint

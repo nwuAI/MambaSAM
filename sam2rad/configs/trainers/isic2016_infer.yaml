@@ -1,0 +1,25 @@
+
+image_size: 1024
+image_encoder: "sam_vit_b_adapter"
+mask_decoder: "lora_mask_decoder"
+sam_checkpoint: "weights/sam_vit_b.pth"
+wandb_project_name: "tn3k"
+prompt_predictor: "sam_vitb_high_res_ppn"
+
+inference:
+  model_checkpoint: "checkpoints/model_epoch=239-val_dice=0.94.ckpt"
+  input_images: /dataNfs/ncp/SamRadiology-main/tn3k
+  output_dir: /dataNfs/ncp/SamRadiology-main/logs/result/tn3k
+  image_size: 512
+  name: tn3k_test
+
+dataset:
+  name: tn3k
+  root: /dataNfs/ncp/SamRadiology-main/tn3k
+  image_size: 512
+  split: 0.75
+  seed: 42
+  batch_size: 4
+  num_workers: 4
+  num_classes: 1
+  num_tokens: 10

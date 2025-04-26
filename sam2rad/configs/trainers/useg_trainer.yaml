@@ -1,0 +1,16 @@
+description: "Config for hyperparameters of the training."
+lr: [1.0E-3, 1.0E-4]
+max_epochs: 200
+
+
+datasets:
+  # - sonance
+  - 3dus_chop
+  # - hip
+  # - shoulder
+  # - elbow
+  # - wrist
+  # - 3d-chop
+
+save_path: "experiments/mobile_sam/3dus_chop"
+# resume: "/home/wahd/mppm/experiments/mobile_sam/3dus_chop/last.ckpt"

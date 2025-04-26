@@ -1,0 +1,6 @@
+descripton: "config file for building SAM-like models."
+image_size: 1024
+prompt_predictor: "linear" # choices: linear, transformer, identity
+image_encoder: "sam2_tiny_hiera"
+mask_decoder: "sam2_lora_mask_decoder"
+sam_checkpoint: "/home/wahd/mppm/weights/sam2_hiera_tiny.pt"

@@ -1,0 +1,26 @@
+image_size: 1024
+image_encoder: "sam_vit_b_adapter"
+mask_decoder: "lora_mask_decoder"
+sam_checkpoint: "weights/sam_vit_b.pth"
+wandb_project_name: "monuseg"
+prompt_predictor: "sam_vitb_high_res_ppn"
+
+dataset:
+  name: monuseg
+  root: /dataNfs/ncp/SamRadiology-main/dataset/MoNuSeg
+  image_size: 512
+  split: 0.9
+  seed: 42
+  batch_size: 8
+  num_workers: 4
+  num_classes: 1
+  num_tokens: 10
+
+training:
+  max_epochs: 400
+  save_path: checkpoints/monuseg
+
+inference:
+  name: monuseg_test
+  root: /dataNfs/ncp/SamRadiology-main/tn3k/test
+  checkpoint_path: checkpoints/isic2016/XXX.pt

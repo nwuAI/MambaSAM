@@ -1,0 +1,14 @@
+description: "Config for hyperparameters of the training."
+lr: [1.0E-3, 1.0E-4]  # Learning rate for prompt learning parameters, learning rate for object prediction head parameters
+max_epochs: 200
+
+datasets:
+  - 3dus_chop
+  # - sonance
+  # - hip
+  # - shoulder
+  # - elbow
+  # - wrist
+
+save_path: "experiments/sam2_small_hierarchical/3dus_chop"
+resume: "experiments/sam2_small_hierarchical/3dus_chop/last.ckpt"

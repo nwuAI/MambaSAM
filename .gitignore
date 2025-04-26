@@ -1,0 +1,15 @@
+.vscode/
+.env/
+.venv/
+.mypy_cache/
+__pycache__/
+*.pyc
+weights/
+logs/
+*.pth
+*.ckpt
+wandb/
+shared
+pyrightconfig.json
+*.egg-info/
+

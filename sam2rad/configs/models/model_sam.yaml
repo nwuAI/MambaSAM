@@ -1,0 +1,17 @@
+descripton: "config file for building SAM-like models."
+
+# image_size: 256
+# image_encoder: "vit_tiny"
+# mask_decoder: "sam_mask_decoder"
+# adapter_layers: 12
+# sam_checkpoint: "weights/mobile_sam.pt"
+
+image_size: 256
+mask_decoder: "lora_mask_decoder"
+pred_obj_scores: true
+pred_obj_scores_mlp: false
+adapter_layers: 0 
+# image_encoder: "sam_vit_b"
+# sam_checkpoint: "weights/sam_vit_b_01ec64.pth"
+image_encoder: "vit_tiny_adapter"
+sam_checkpoint: "weights/mobile_sam.pt"
